@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* lo básico */
+        .breadcrumbs {
+            display: none;
+        }
+        .cms-page-view .page-wrapper {
+            background-color: #fff;
+        }
+        a {
+            text-decoration:none;
+        }
+        .abs-cms-section,.columns .column.main,.cms-page-view .column.main .page-section {
+            margin: 0px;
+            padding: 0px!important;
+            box-shadow: none;
+            background-color: #fff;
+        }
+        .text-center {
+            text-align:center;
+        }
+        .mw-1270 {
+            max-width: 1270px;
+            margin:0px auto!important;
+        }
+        .mw-1460 {
+            max-width:1460px;
+            margin:0px auto!important;
+        }
+        .mw-1460--conoce {
+            max-width: 1460px;
+            margin: 0px auto!important;
+            padding: 45px 0px;
+        }
+        .mw-1460--boton {
+            max-width: 1460px;
+            margin: 80px auto 0px;
+            text-align: center;
+        }
+        .mw-1460--botonAbajo {
+            max-width: 1460px;
+            margin: 40px auto 0px;
+            text-align: center;
+        }
+        .mw-1680 {
+            max-width:1680px;
+            margin:0px auto;
+        }
+        .mt-80 {
+            margin-top: 80px;
+        }
+        .mb-80 {
+            margin-bottom: 80px;
+        }
+    @media (max-width:768px) {
+        .mb-25 {
+            margin-bottom: 25px;
+        }
+    }
+        .d-grid {
+            display:grid;
+        }
+        .gridsection {
+            padding:0px;
+        }
+        
+        /* breadcrumb */
+        @media (min-width:768px) {
+            .breadcrumb-mob {
+                display:none;
+            }
+        }
+        @media (max-width:767px) {
+            .breadcrumb-desk {
+                display:none;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .breadcrumb-desk {
+                margin: 10px 0;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .breadcrumb-mob {
+                margin: 10px 0 0 15px;
+                text-decoration: none;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .breadcrumb-landing {
+                font-weight: 300;
+                font-size: 12px;
+                color: #4c4c4c;
+                line-height: 1.4;
+            }
+        }
+        @media screen and (max-width: 767px) {
+        .link-breadcrumb:before {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-size: 14px;
+                line-height: 1;
+                color: inherit;
+                content: "\f13a";
+                font-family: summa-icons;
+                margin: 0 3px 0 0;
+                vertical-align: middle;
+                display: inline-block;
+                font-weight: 400;
+                overflow: hidden;
+                speak: none;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            .link-breadcrumb {
+                font-family: Inter,'Helvetica Neue',Helvetica,Arial,sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.4;
+                color: #4c4c4c;
+                font-size: 12px!important;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .breadcrumb-landing, .link-breadcrumb {
+                font-size: 12px;
+                color: #4c4c4c;
+                line-height: 1.4;
+            }
+        }
+        
+        /* Imagen Principal */
+        .imagen__principal {
+            background: url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/img-ropa-de-cama-cl2.jpg) no-repeat;
+            background-position:bottom;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    @media (max-width:470px) {
+        .imagen__principal {
+            background: url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/img-ropa-de-cama-cl2-mobile.jpg);
+            background-position: 50% 40%;
+        }
+    }
+        .contenido__principal {
+            max-width: 420px;
+            margin: 0px auto;
+            text-align: center;
+            display: grid;
+            align-content: space-between;
+            height: 830px;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+    @media (max-width:470px) {
+        .contenido__principal {
+            margin: 0px auto 20px;
+            height: 650px;
+        }
+    }
+        .contenido__principal a {
+            border: 1px solid #fff;
+            color: #fff;
+            border-radius: 25px;
+            padding: 7px 25px;
+            text-transform: uppercase;
+            font-size: 12px;
+            max-width: 200px;
+            margin: 0% auto 50%;
+            text-decoration: none;
+        }
+    @media (max-width:470px) {
+        .contenido__principal a {
+            margin: 0% auto 90%;
+        }
+    }
+        .contenido__principal a:hover {
+            border: 1px solid #fff;
+            color: #323232;
+            background-color: #fff;
+            transition: ease .3s;
+        }
+        
+        /* Inicio Sección contenido */
+        .br-70 {
+            border-radius: 70px 70px 0px 0px;
+            background-color: #fff;
+            padding-top: 30px;
+            margin-top: -70px;
+            position: relative;
+        }
+    @media (max-width:768px) {
+        .br-70 {
+            border-radius: 40px 40px 0px 0px;
+        }
+    }
+    
+        /* Titulo principal -  h1 */
+        
+        .title__page {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            .title__page {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* Carrusel categorias */
+        .slider {
+            max-width:1400px;
+            margin:0px auto 45px;
+        }
+        .slick-slide {
+            width:100%;
+            padding: 0 6px;
+        }
+        
+        .slick-track {
+            height: auto;
+        }
+        
+        .slick-sliderized {
+            max-width:183px;
+        }
+        .slick-img {
+            width:100%;
+            max-width:183px;
+            border-radius: 10px;
+        }
+        @media (max-width:768px) {
+            .--non-border {
+                border-radius: 0px;
+            }
+            .slick-anchor {
+                font-size:13px!important;
+            }
+        }
+        .pagebuilder-button-secondary {
+            border: 1px solid #323232!important;
+            background-color: #fff!important;
+            color: #323232!important;
+            margin: 0!important;
+        }
+        .slick-anchor {
+            display: block;
+            text-align: center;
+            margin: 10px 0px;
+        }
+        .button_16px {
+            font-size:16px;
+        }
+        
+        /* Bajada */
+        .text__main {
+            max-width: 890px;
+            margin: 0px auto 10px;
+            text-align:center;
+        }
+        @media (max-width:768px) {
+            .text__main {
+                margin: 50px 20px 40px;
+            }
+        }
+        .container_up {
+            margin-top:10px;
+        }
+        @media (min-width:768px) {
+            .container_buttons {
+                display: block;
+                max-width:530px;
+                margin:0 auto 65px;
+                text-align: center;
+            }
+        }
+        @media (max-width:767px) {
+           .container_buttons {
+                margin:0 auto 35px;
+                text-align: center;
+            }
+        }
+        .button_categories {
+            text-align:center;
+        }
+        @media (max-width:768px) {
+            .button_categories {
+                text-align:center;
+                margin: 0px;
+            }
+        }
+        @media (min-width:768px) {
+            .arriba-md {
+                margin: 40px 0px 15px;
+            }
+        }
+        @media (max-width: 767px) {
+            .arriba-md {
+                margin: 20px 0px;
+            }
+        }
+        .button_cyc {
+            color: #fff;
+            background-color:#D9D9D9;
+            font-size: 12px!important;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            text-decoration: none; 
+            transition: background-color 0.3s ease;
+            min-width: 180px!important;
+            text-align:center;
+            border-radius: 30px;
+        }
+        .button_cyc:hover {
+            color: #fff!important;
+            background-color:#BEB5B2;
+            text-decoration: none; 
+        }
+        .button_cyc-mt15 {
+            color: #fff;
+            background-color:#D9D9D9;
+            font-size: 12px!important;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            text-decoration: none; 
+            transition: background-color 0.3s ease;
+            min-width: 180px!important;
+            text-align:center;
+            border-radius: 30px;
+            margin-top: -15px;
+        }
+        .button_cyc-mt15:hover {
+            color: #fff!important;
+            background-color:#BEB5B2;
+            text-decoration: none; 
+        }
+        
+        /* menu y espacios */
+        .container__menu_espacios {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            column-gap: 50px;
+            margin-bottom: 70px;
+        }
+        @media (max-width:768px) {
+            .container__menu_espacios {
+                display: block;
+                margin-bottom: 50px;
+            }
+        }
+        /* Estilos para el elemento */
+        .elemento {
+            opacity: 1; /* Inicialmente opacidad máxima */
+            transition: opacity 0.5s ease-in-out; /* Agregamos transición de opacidad */
+            margin: 50px auto;
+            padding: 0px 20px;
+        }
+    @media (max-width:768px) {
+        .elemento {
+            margin: 70px auto;
+        }
+    }
+        /* Estilos para el segundo elemento */
+        .elemento2 {
+            opacity: 1; /* Inicialmente opacidad máxima */
+            transition: opacity 0.5s ease-in-out; /* Agregamos transición de opacidad */
+        }
+        /* Shop the look */
+        .container__shopthelook-arriba {
+            display: grid;
+            grid-template-columns: 3fr 4.85fr 4fr;
+            gap:5px;
+        }
+    @media (max-width:1139px) and (min-width:769px) {
+        .container__shopthelook-arriba {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+    }
+    @media (max-width:768px) {
+        .container__shopthelook-arriba {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap:5px;
+        }
+        .shop__the__look3 {
+            grid-area: inherit;
+            order:1;
+        }
+        .shop__the__look1 {
+            grid-area: inherit; 
+            order:2;
+        }
+        .shop__the__look2 {
+            grid-area: inherit;
+            order:3;
+        }
+        .dn-mobile {
+            display:none;
+        }
+    }
+    @media (min-width:1140px) {
+        .shop__dn-desktop {
+            display:none;
+        }
+    }
+    @media (max-width:1139px) {
+        .shop__dn-mobile {
+            display:none;
+        }
+    }
+    @media (min-width:1140px) {
+        .container__shopthelook-abajo {
+            display: grid;
+            grid-template-columns: 5fr 6.84fr;
+            gap:5px;
+        }
+    }
+    @media (max-width:1139px) and (min-width:769px) {
+        .container__shopthelook-abajo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+    }
+    @media (max-width:768px) {
+        .container__shopthelook-abajo {
+            grid-template-columns: 1fr;
+        }
+    }
+        .shop__the__look3 {
+            display: grid;
+            align-items: center;
+        }
+        .contenedor__play:nth-child(1) {
+            margin: 143px auto;
+            max-width: 80px;
+        }
+        .contenedor__play:nth-child(2) {
+            margin: 152px auto;
+            max-width: 80px;
+        }
+        .gridsection {
+            padding: 0px!important;
+        }
+        .sunset-4 {
+            background:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sunset-32x.jpg);
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            background-size: contain;
+            /* margin-bottom: 5px; */
+        }
+        .greenery-1 {
+            background:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/greenery24x-nuevo.jpg);
+            /* background-position: center; */
+            background-repeat: no-repeat;
+            background-size: contain;
+            /* margin-bottom: 5px; */
+        }
+    @media (min-width:1306px) {
+        .block3 {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+    }
+    @media (max-width:1305px) and (min-width:1140px) {
+        .block3 {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (max-width:1139px) and (min-width:769px) {
+        .block3 {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+        .shop__the__look2 {
+            display:none;
+        }
+    }
+    @media (max-width:768px) {
+        .block3 {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+    }
+        .container__block3 {
+            background-color: #F2F2F2;
+            text-align: center;
+            padding: 35px 30px;
+        }
+        .content__block3 {
+            text-align: center;
+        }
+    @media (min-width:1306px) {
+        .form__block3 {
+            display: grid;
+            justify-content: end;
+        }
+    }
+    @media (max-width:768px) {
+        .form__block3 {
+            display: grid;
+            justify-content: end;
+        }
+    }
+    @media (max-width:1305px) and (min-width:1140px) {
+        .form__block3 {
+            display: none;
+        }
+    }
+    @media (min-width:1306px) {
+        .form__block3 {
+            display: grid;
+            justify-content: end;
+        }
+    }
+    @media (max-width:1139px) and (min-width:769px) {
+        .form__block3 {
+            display: grid;
+            justify-content: end;
+        }
+    }
+        .form__block3 img {
+            max-height: 250px;
+        }
+        /* Complementos */
+        .back__gray {
+            background-color: #D9D9D9;
+        }
+        .bloque__complementos {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+        }
+    @media (max-width:935px) and (min-width:456px) {
+        .bloque__complementos {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 15px;
+        }
+    }
+    @media (max-width:455px) {
+        .bloque__complementos {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+        .complementos {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            align-content: space-between;
+        }
+        .complementos h4 {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .complementos p {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .complementos .mb-50 {
+            font-size: 14px;
+            margin-bottom: 50px;
+        }
+        /* Bloque Proceso */
+        .bloque__proceso {
+            display: grid;
+            grid-template-columns: 2.41fr 3.38fr 2.41fr;
+            gap: 5px;
+        }
+    @media (max-width:455px) {
+        .bloque__proceso {
+            grid-template-columns: 1fr;
+        }
+        .proceso:nth-child(1),.proceso:nth-child(3) {
+            display: none;
+        }
+    }
+        /* Bloque Colecciones */
+        .bloque__colecciones {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 8px;
+        }
+        .colecciones p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Carrusel 2 */
+        .container__slider-sw-2 {
+            padding: 10px 0 0;
+        }
+        .slider-sw__item-2 {
+            padding: 30px 10%;
+            text-align:center;
+        }
+    @media (min-width:769px) {
+        .slider-sw__slider-2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+            margin: 0px auto;
+            text-align: center;
+            max-width: 1460px;
+        }
+        .slider-sw__item-2 {
+            padding: 0px;
+        }
+    }
+    @media (max-width:768px) {
+        .slider-sw__slider-2 {
+            margin: 10px auto 0px;
+        }
+    }
+        .container__slider-sw-2 .slick-arrow.slick-prev {
+            left: 5%;
+        }
+        .container__slider-sw-2 .slick-arrow.slick-next {
+            right: 5%;
+        }
+        .slider-sw__contenedor {
+            overflow: hidden;
+        }   
+        .slider-sw__slider-2 .slick-track {
+            padding: 0px 0 10px;
+        }
+        @media (min-width: 769px) {
+            .slider-sw__slider-2 .slick-track {
+                padding: 0;
+            }
+        }
+        .slider-sw__btn:hover {
+            cursor: pointer !important;
+        } 
+    
+        /* Bloque esenciales */
+        .bloque__esenciales {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 10px;
+        }
+    @media (max-width:490px) {
+        .bloque__esenciales {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    } 
+        span.tag {
+            background-color: #fff;
+            margin: 40px 0px 330px 0px;
+            padding: 15px 40px 15px 45px;
+            display:inline-flex;
+        }
+        .content__esenciales4 {
+            display: grid;
+            grid-area: 2 / 1 / 3 / 5;
+        }
+        .esenciales4 {
+            background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/plumon2x.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 365px;
+        }
+        .content__esenciales5 {
+            display: grid;
+            grid-area: 2 / 5 / 3 / 9;
+        }
+        .esenciales5 {
+            background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/almohadas2x.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 365px;
+        }
+        .content__esenciales1 {
+            display: grid;
+            grid-area: 2 / 9 / 3 / 13;
+        }
+        .esenciales1 {
+            background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/cubrecolchon2x.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 365px;
+        }
+        .content__esenciales2 {
+            display: grid;
+            grid-area: 1 / 1 / 2 / 6;
+        }
+        .esenciales2 {
+            background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sabanas2x.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 365px;
+        }
+        .content__esenciales3 {
+            display: grid;
+            grid-area: 1 / 6 / 2 / 13;
+        }
+        .esenciales3 {
+            background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/topper2x.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 365px;
+        }
+    @media (max-width:720px) and (min-width:491px) {
+        .content__esenciales2 { 
+            grid-area: 1 / 1 / 2 / 7; 
+        }
+        .content__esenciales3 { 
+            grid-area: 1 / 7 / 2 / 13;
+        }
+        .content__esenciales4 {
+            grid-area: 2 / 1 / 3 / 7; 
+        }
+        .content__esenciales5 { 
+            grid-area: 2 / 7 / 3 / 13;
+        }
+        .content__esenciales1 { 
+            grid-area: 3 / 1 / 4 / 13;
+        }
+    }
+    @media (max-width:490px) {
+        .content__esenciales2,.content__esenciales3,.content__esenciales4,.content__esenciales5,.content__esenciales1 { 
+            grid-area: inherit;
+        }
+    }
+        
+        /* Bloque Colecciones */
+        .bloque__colecciones {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 8px;
+        }
+    @media (max-width:768px) {
+        .bloque__colecciones {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+    }
+        .colecciones p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Descubre */
+        .container_descubre {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 10px;
+        }
+        @media (max-width:768px) {
+            .container_descubre {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+        }
+        .title_descubre-h3 {
+            font-size:18px;
+            font-weight:400;
+            text-align:center;
+            margin-top:18px;
+        }
+        .paragraph_descubre-p {
+            font-size:14px;
+            text-align:center;
+            max-width: 250px;
+            margin: 0px auto;
+        }
+        @media (min-width:768px) {
+            .mobile-rdcr {
+                display:none;
+            } 
+        }
+        @media (max-width:767px) {
+            .desktop-rdcr {
+                display:none;
+            } 
+        }    
+        /* Tutoriales */
+        .bloque__tutoriales {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:20px;
+        }
+    @media (max-width:768px) {
+        .bloque__tutoriales {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+    @media (min-width:769px) {
+        .tutoriales:nth-child(1) {
+            order:1;
+        }
+        .tutoriales:nth-child(2) {
+            order:4;
+        }
+        .tutoriales:nth-child(3) {
+            order:2;
+        }
+        .tutoriales:nth-child(4) {
+            order:5;
+        }
+        .tutoriales:nth-child(5) {
+            order:3;
+        }
+        .tutoriales:nth-child(6) {
+            order:6;
+        }
+    }
+        .back_tutoriales-1 {
+            background:url(https://www.rosen.cl/media/wysiwyg/banner-rdc-1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    @media (max-width:768px) {
+        .back_tutoriales-1,.back_tutoriales-2,.back_tutoriales-3 {
+            margin: 0px 20px;
+        }
+    }
+        .back_tutoriales-2 {
+            background:url(https://www.rosen.cl/media/wysiwyg/banner-rdc-2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .back_tutoriales-3 {
+            background:url(https://www.rosen.cl/media/wysiwyg/banner-rdc-3.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        p.tutoriales {
+            text-align: center;
+        }
+    /* Blog Rosen */
+    a, a:hover {
+        text-decoration:none;
+    }
+    .titles_categories {
+        font-size:26px;
+        text-align:center;   
+        margin:80px 0px 40px;   
+    }
+    @media (max-width:768px) {
+        .titles_categories {
+            font-size:22px;
+            margin: 60px 20px 40px;
+            padding: 0px 20px;
+        }
+    }
+    .text-bold {
+        font-weight:bold;
+    }
+    .enjoy_us {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:15px;
+    }
+    @media (max-width:768px) {
+        .enjoy_us {
+            display: block;
+        }
+    }
+    .text-center {
+        text-align:center; 
+    }
+    .back-gray {
+        background-color:#F5F5F5;
+    }
+    .blog__rosen-title {
+        font-size: 18px;
+        font-weight: 500;
+        max-width: 360px;
+        text-align: center;
+        margin: 30px auto 10px;
+    }
+    @media (max-width:905px) and (min-width:769px) {
+        .blog__rosen-title {
+            font-size: 18px;
+            font-weight: 500;
+            max-width: 360px;
+            text-align: center;
+            margin: 30px auto 10px;
+        }
+    }
+    .enjoy__categories-p {
+        font-size:14px;
+    }
+    @media (max-width:768px) {
+        .enjoy__categories-p {
+            padding:0px 20px 30px;
+        }
+    }
+    .mb-40 {
+        margin-bottom: 40px;
+    }
+    @media (max-width:768px) {
+        .mb-40 {
+            padding-bottom:40px;
+            margin-bottom: 10px;
+        }
+    }
+    </style>
+        
+        <!-- banner 100% -->
+        <div class="mw-1680">
+            <div class="imagen__principal">
+                <div class="contenido__principal" id="contenido_principal" data-datalayer-id="boton_1" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="boton - ropa de cama - ver todo lo nuevo">
+                    <img class="elemento" id="elemento" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/img-ropa-de-cama-2.png" alt="" loading="lazy">
+                    <a class="elemento2" id="elemento2" href="/rosen/ropa-de-cama/nuevos-textiles-rosen.html">ver todo lo nuevo</a>
+                </div>
+            </div>
+        </div>
+        <div class="mw-1680 br-70">
+            <div class="mw-1460">
+                <h1 class="text-center title__page">Explora nuestras categorías</h1>
+                <!-- carrusel categorias -->
+                    <div class="slider">
+                        <div class="slick-slider">
+                            <div class="slick-sliderized" data-datalayer-id="slide_1" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="slider - ropa de cama - Sábanas">
+                                <a href="/ropa-de-cama/ropa-de-cama/sabanas.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sabanas2x.png" alt="Image 1" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/sabanas.html">Sábanas</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_2" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="slider - ropa de cama - Plumones">
+                                <a href="/ropa-de-cama/ropa-de-cama/plumones.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/plumones-blancos2x.png" alt="Image 2" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/plumones.html">Plumones</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_3" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="slider - ropa de cama - Almohadas">
+                                <a href="/ropa-de-cama/ropa-de-cama/almohadas.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/almohadas2xb.png" alt="Image 3" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/almohadas.html">Almohadas</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_4" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="slider - ropa de cama - Fundas de Plumón">
+                                <a href="/ropa-de-cama/ropa-de-cama/fundas-de-plumon.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/fundas-plumon2x.png" alt="Image 4" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/fundas-de-plumon.html">Fundas de Plumón</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_5" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="slider - ropa de cama - Cubrecamas">
+                                <a href="/ropa-de-cama/ropa-de-cama/cubrecamas-colchas-y-quilts.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/cubrecamas2xb.png" alt="Image 5" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/cubrecamas-colchas-y-quilts.html">Cubrecamas</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_6" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="6" data-datalayer-creative="slider - ropa de cama - Cojines">
+                                <a href="/ropa-de-cama/ropa-de-cama/cojines.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/cojines2xb.png" alt="Image 6" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/cojines.html">Cojines</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_7" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="7" data-datalayer-creative="slider - ropa de cama - Cubrecolchón y Topper">
+                                <a href="/ropa-de-cama/ropa-de-cama/cubrecolchon-y-topper.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/cubre-colchones2x.png" alt="Image 7" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/cubrecolchon-y-topper.html">Cubrecolchón y Topper</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_8" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="8" data-datalayer-creative="slider - ropa de cama - Mantas y Pieceras">
+                                <a href="/ropa-de-cama/ropa-de-cama/mantas-y-pieceras.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/mantas2x.png" alt="Image 8" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/ropa-de-cama/ropa-de-cama/mantas-y-pieceras.html">Mantas y Pieceras</a>
+                            </div>
+                            <div class="slick-sliderized" data-datalayer-id="slide_9" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="9" data-datalayer-creative="slider - ropa de cama - Sale">
+                                <a href="/sale/ropa-de-cama.html">
+                                    <img class="slick-img" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sale2x.png" alt="Image 9" loading="lazy">
+                                </a>
+                                <a class="slick-anchor" href="/sale/ropa-de-cama.html">Sale</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+            <!-- Bajada -->
+            <div class="mw-1460">
+                <div class="container_buttons container_up" data-datalayer-id="boton_ver_todo_ropa_de_cama_arriba" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="botón arriba - ropa de cama - Ver todo ropa de cama">
+                    <a class="button_cyc" href="/ropa-de-cama.html">ver todo ropa de cama</a>
+                </div>
+                <h1 class="text-center title__page">Mix and Dream</h1>
+                <p class="text__main">La naturaleza, los bordados y tonos de tendencia como oliva y ámbar son algunas de las novedades de nuestra colección textil 2024. Un mix de texturas, tonalidades y estilos que les darán vida a tus espacios.</p>
+            </div>
+            <div class="mw-1680 mt-80">
+                <div class="container__shopthelook-arriba">
+                    <div class="shop__the__look1 dn-mobile" data-datalayer-id="shop_the_look_sunset_tones" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="shop the look - ropa de cama - sunset tones 1">
+                        {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29134"}}
+                    </div>
+                    <div class="shop__the__look2 dn-mobile" data-datalayer-id="shop_the_look_sunset_tones" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="shop the look - ropa de cama - sunset tones 2">
+                        {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29137"}}
+                    </div>
+                    <div class="shop__the__look3 mb-25">
+                        <div class="block3">
+                            <div class="content__block3" data-datalayer-id="shop_the_look_sunset_tones" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="shop the look botón - ropa de cama - sunset tones 3">
+                                <div class="container__block3">
+                                    <h3 class="title__block3">Sunset Tones</h3>
+                                    <p class="paragraph__block3">Compuesta por blanco, crudo, arena y camel, esta paleta de colores es atemporal e ideal para crear ambientes que transmiten energía y calidez. Textiles de tonos que son combinables con otras coloraciones y estilos decorativos.</p>
+                                </div>
+                                <a href="/rosen/ropa-de-cama/sunset-tones.html" class="button_cyc-mt15">ver todo</a>
+                            </div>
+                            <div class="form__block3">
+                                <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sunset2x.png" alt="forma" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__shopthelook-abajo">
+                    <!-- desktop -->
+                    <div class="shop__the__look4 shop__dn-mobile" data-datalayer-id="shop_the_look_sunset_tones" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="shop the look - ropa de cama - sunset tones 4">
+                        {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="2" product_ids="29428"}}           
+                    </div>
+                    <!-- desktop
+                    <div class="shop__the__look4 sunset-4 shop__dn-mobile">
+                        <div class="contenedor__item bg-img-bnr" data-datalayer-id="video_ropa_de_cama_como_doblar_las_sabanas_inferiores" data-datalayer-name="Landing de Negocio: Ropa de Cama" data-datalayer-position="2" data-datalayer-creative="Video - Ropa de cama - Como doblar las sabanas inferiores">
+                            <a href="#" class="vpop" data-type="vimeo" data-id="782689095" data-autoplay="true" data-loop="true" data-muted="true" data-playsinline="true">
+                                <div class="contenedor__play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-6 h-6">
+                                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    -->
+                    <!-- mobile -->
+                    <div class="shop__the__look4 shop__dn-desktop" data-datalayer-id="shop_the_look_sunset_tones" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="shop the look - ropa de cama - sunset tones 4">
+                        {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29548"}}           
+                    </div>
+                    <!-- desktop -->
+                    <div class="shop__the__look5 shop__dn-mobile" data-datalayer-id="shop_the_look_sunset_tones" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="shop the look - ropa de cama - sunset tones 5">
+                        {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29140"}}           
+                    </div>
+                    <!-- mobile -->
+                    <div class="shop__the__look5 shop__dn-desktop" data-datalayer-id="shop_the_look_sunset_tones" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="shop the look - ropa de cama - sunset tones 5">
+                        {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29551"}}           
+                    </div>
+                    </div>
+                    <h2 class="titles_categories">Atrévete con nuestras nuevas <strong>combinaciones de colores</strong></h2>
+                    <div class="container__shopthelook-arriba">
+                        <div class="shop__the__look1 dn-mobile" data-datalayer-id="shop_the_look_stormy_seas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="shop the look - ropa de cama - stormy seas 1">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29143"}}
+                        </div>
+                        <div class="shop__the__look2 dn-mobile" data-datalayer-id="shop_the_look_stormy_seas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="shop the look - ropa de cama - stormy seas 2">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29146"}}
+                        </div>
+                        <div class="shop__the__look3 mb-25">
+                            <div class="block3">
+                                <div class="content__block3" data-datalayer-id="shop_the_look_stormy_seas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="shop the look botón - ropa de cama - stormy seas 3">
+                                    <div class="container__block3">
+                                        <h3 class="title__block3">Stormy Seas</h3>
+                                        <p class="paragraph__block3">Prueba esta combinación de tonos compuesta por distintas tonalidades de grises y piedras. El resultado de esta mezcla son ambientes de mucho carácter y elegantes. Combina nuestros textiles y sorpréndete con el resultado.</p>
+                                    </div>
+                                    <a href="/rosen/ropa-de-cama/stormy-seas.html" class="button_cyc-mt15">ver todo</a>
+                                </div>
+                                <div class="form__block3">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/stormy2x.png" alt="forma" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__shopthelook-abajo">
+                        <!-- desktop -->
+                        <div class="shop__the__look4 shop__dn-mobile" data-datalayer-id="shop_the_look_stormy_seas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="shop the look - ropa de cama - stormy seas 4">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="2" product_ids="29158"}}
+                        </div>
+                        <!-- mobile -->
+                        <div class="shop__the__look4 shop__dn-desktop" data-datalayer-id="shop_the_look_stormy_seas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="shop the look - ropa de cama - stormy seas 4">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="2" product_ids="29572"}}           
+                        </div>
+                        <!-- desktop -->
+                        <div class="shop__the__look5 shop__dn-mobile" data-datalayer-id="shop_the_look_stormy_seas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="shop the look - ropa de cama - stormy seas 5">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="2" product_ids="29161"}}
+                        </div>
+                        <!-- mobile -->
+                        <div class="shop__the__look5 shop__dn-desktop" data-datalayer-id="shop_the_look_stormy_seas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="shop the look - ropa de cama - stormy seas 5">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="2" product_ids="29575"}}           
+                        </div>
+                    </div>
+                    <div class="container__shopthelook-arriba mt-80">
+                        <div class="shop__the__look1 dn-mobile" data-datalayer-id="shop_the_look_greenery" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="shop the look - ropa de cama - greenery 1">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="2" product_ids="29425"}}
+                        </div>
+                        <div class="shop__the__look2 dn-mobile" data-datalayer-id="shop_the_look_greenery" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="shop the look - ropa de cama - greenery 2">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="2" product_ids="29149"}}
+                        </div>
+                        <div class="shop__the__look3 mb-25">
+                            <div class="block3">
+                                <div class="content__block3" data-datalayer-id="shop_the_look_greenery" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="shop the look botón - ropa de cama - greenery 3">
+                                    <div class="container__block3">
+                                        <h3 class="title__block3">Greenery</h3>
+                                        <p class="paragraph__block3">Los tonos protagonistas de esta paleta son el salvia y oliva, acompañados del blanco y crudo que les dan luminosidad. Una tendencia en coloración y textiles que da a los ambientes frescura y ese toque lúdico que inspira relajo.</p>
+                                    </div>
+                                    <a href="/rosen/ropa-de-cama/greenery.html" class="button_cyc-mt15">ver todo</a>
+                                </div>
+                                <div class="form__block3">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/greenery2x.png" alt="forma" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__shopthelook-abajo">
+                        <!-- desktop -->
+                        <div class="shop__the__look4 dn-mobile shop__dn-mobile" data-datalayer-id="shop_the_look_greenery" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="shop the look - ropa de cama - greenery 4">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29431"}}           
+                        </div>
+                        <!-- desktop
+                        <div class="shop__the__look4 greenery-1 dn-mobile shop__dn-mobile">
+                            <div class="contenedor__item bg-img-bnr" data-datalayer-id="video_ropa_de_cama_Como_poner_bien_las_sabanas" data-datalayer-name="Landing de Negocio: Ropa de Cama" data-datalayer-position="3" data-datalayer-creative="Video - Ropa de cama - Como poner bien las sabanas">
+                                <a href="#" class="vpop" data-type="vimeo" data-id="781824601" data-autoplay="true" data-loop="true" data-muted="true" data-playsinline="true">
+                                    <div class="contenedor__play">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-6 h-6">
+                                            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        -->
+                        <!-- mobile -->
+                        <div class="shop__the__look4 shop__dn-desktop" data-datalayer-id="shop_the_look_greenery" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="shop the look - ropa de cama - greenery 4">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29596"}}           
+                        </div>
+                        <!-- desktop -->
+                        <div class="shop__the__look5 shop__dn-mobile" data-datalayer-id="shop_the_look_greenery" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="shop the look - ropa de cama - greenery 5">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29155"}}
+                        </div>
+                        <!-- mobile -->
+                        <div class="shop__the__look5 shop__dn-desktop" data-datalayer-id="shop_the_look_greenery" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="shop the look - ropa de cama - greenery 5">
+                            {{widget type="Webkul\LookBook\Block\Widget\LookBookWidget" lookbook_template="grid" no_of_product="1" product_ids="29599"}}
+                        </div>
+                    </div>
+                </div>
+                <h2 class="titles_categories">Conoce todos nuestros complementos que le darán calidez a tu dormitorio</h2>
+                <div class="mw-1680 back__gray">
+                    <div class="mw-1460--conoce">
+                        <div class="bloque__complementos">
+                            <div class="complementos" data-datalayer-id="banner_1" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="banner - ropa de cama - complementos plumones">
+                                <a href="/ropa-de-cama/ropa-de-cama/plumones.html">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/plumones2x.png" alt="imagen complementos" loading="lazy">
+                                    <h4>Plumones</h4>
+                                    <p>Con nuevos estampados inspirados en la naturaleza y el mundo botánico, y materiales que brindan abrigo y suavidad, la nueva colección es ideal para dar calidez a tus espacios.</p>
+                                </a>
+                                <div data-datalayer-id="boton_1" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="botón - ropa de cama - complementos plumones">
+                                    <a href="/ropa-de-cama/ropa-de-cama/plumones.html" class="button_cyc">ver más</a>
+                                </div>
+                            </div>
+                            <div class="complementos" data-datalayer-id="banner_2" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="banner - ropa de cama - complementos cubrecamas y quilts">
+                                <a href="/ropa-de-cama/ropa-de-cama/cubrecamas-colchas-y-quilts.html">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/cubrecamas2x.png" alt="imagen complementos" loading="lazy">
+                                    <h4>Cubrecamas y Quilts</h4> 
+                                    <p>Elige entre textiles de tonalidades neutras y con acentos de color, con materialidades y texturas que generan una sensación única de confortabilidad. Confeccionados en materiales desde 100% algodón hasta sintéticos.</p>          
+                                </a>
+                                <div data-datalayer-id="boton_2" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="botón - ropa de cama - complementos Cubrecamas y Quilts">                   
+                                    <a href="/ropa-de-cama/ropa-de-cama/cubrecamas-colchas-y-quilts.html" class="button_cyc">ver más</a>  
+                                </div>
+                            </div>
+                            <div class="complementos" data-datalayer-id="banner_3" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="banner - ropa de cama - complementos cojines">
+                                <a href="/ropa-de-cama/ropa-de-cama/cojines.html">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/cojines2x.png" alt="imagen complementos" loading="lazy">
+                                    <h4>Cojines</h4>    
+                                    <p class="mb-50">Juega con la gran variedad de diseños, bordados y tonos desgastados y suaves, inspirados en la tierra y lo natural. ¡Combínalos en tus dormitorios y living y verás el cambio!</p>
+                                </a>
+                                <div data-datalayer-id="boton_3" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="6" data-datalayer-creative="botón - ropa de cama - complementos cojines">
+                                    <a href="/ropa-de-cama/ropa-de-cama/cojines.html" class="button_cyc">ver más</a>
+                                </div>
+                            </div>
+                            <div class="complementos" data-datalayer-id="banner_4" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="7" data-datalayer-creative="banner - ropa de cama - complementos mantas y pieceras">
+                                <a href="/ropa-de-cama/ropa-de-cama/mantas-y-pieceras.html">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/mantas_pieceras2x.png" alt="imagen complementos" loading="lazy">
+                                    <h4>Mantas y Pieceras</h4>  
+                                    <p class="mb-50">Disfruta del abrigo y suavidad este otoño-invierno con nuestras mantas y pieceras de uso versátil y una gran variedad de tonos neutros ¡Ideales para un descanso reparador!</p>
+                                </a>  
+                                <div data-datalayer-id="boton_4" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="8" data-datalayer-creative="botón - ropa de cama - complementos mantas y pieceras">
+                                    <a href="/ropa-de-cama/ropa-de-cama/mantas-y-pieceras.html" class="button_cyc">ver más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <!--
+                <h2 class="titles_categories">¿Quieres saber el proceso creativo de la nueva colección?</h2>
+                <div class="mw-1680">
+                    <div class="bloque__proceso">
+                        <div class="proceso">
+                            <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/imagen12x.jpg" alt="proceso" loading="lazy">
+                        </div>
+                        <div class="proceso">
+                            <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/imagen22x.jpg" alt="proceso" loading="lazy">
+                        </div>
+                        <div class="proceso">
+                            <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/imagen32x.jpg" alt="proceso" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="mw-1460--boton">
+                    <a href="/rosen/ropa-de-cama/nuevos-textiles-rosen.html" class="button_cyc">ver todo lo nuevo</a>
+                </div>
+    -->
+                <h2 class="titles_categories">Inspírate con nuestras increíbles colecciones para armonizar tu casa</h2>
+                <div class="mw-1460">
+                    <div class="container__slider-sw-2">
+                        <div class="slider-sw__slider-2">
+                            <div class="colecciones" data-datalayer-id="banner_1" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="banner - ropa de cama - coleccion Trini Guzman">
+                                <a href="/hola-leon">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/trini-guzman-banner-min.jpg" alt="proceso" loading="lazy">
+                                    <p>Colección Trini Guzmán, da personalidad a tus espacios</p>
+                                </a>
+                            </div>
+                            <div class="colecciones" data-datalayer-id="banner_2" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="banner - ropa de cama - coleccion Mundo Kids">
+                                <a href="/ropa-de-cama-infantil-rosen">
+                                    <img src="https://www.rosen.cl//media/wysiwyg/2024/ropa-de-cama/mundo-kids-banner-min.jpg" alt="proceso" loading="lazy">
+                                    <p>Mundo Kids, el descanso perfecto para los más pequeños</p>
+                                </a>
+                            </div>
+                            <div class="colecciones" data-datalayer-id="banner_3" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="banner - ropa de cama - coleccion Sergio Arias">
+                                <a href="/rosen/sergio-arias.html">
+                                    <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sergio-arias-banner-min.jpg" alt="proceso" loading="lazy">
+                                    <p>Sergio Arias, Ropa de Cama de Autor</p>
+                                </a>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <h2 class="titles_categories">Blancos/Esenciales</h2>
+                <div class="mw-1270">
+                    <div class="bloque__esenciales">
+                        <div class="content__esenciales1" data-datalayer-id="banner_1" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="banner - ropa de cama - esenciales cubrecolchon">
+                            <a href="/ropa-de-cama/ropa-de-cama/cubrecolchon-y-topper.html?tipo=Cubrecolch%C3%B3n">
+                                <div class="esenciales1">
+                                    <span class="tag">Cubrecolchón</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__esenciales2" data-datalayer-id="banner_2" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="banner - ropa de cama - esenciales sabanas">
+                            <a href="/ropa-de-cama/ropa-de-cama/sabanas.html?color_comercial=Blanco">
+                                <div class="esenciales2">
+                                    <span class="tag">Sábanas</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__esenciales3" data-datalayer-id="banner_3" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="banner - ropa de cama - esenciales topper">
+                            <a href="/ropa-de-cama/ropa-de-cama/cubrecolchon-y-topper.html?tipo=Topper">
+                                <div class="esenciales3">
+                                    <span class="tag">Topper</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__esenciales4" data-datalayer-id="banner_4" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="banner - ropa de cama - esenciales plumón">
+                            <a href="/ropa-de-cama/ropa-de-cama/plumones.html?tipo=Blancos">
+                                <div class="esenciales4">
+                                    <span class="tag">Plumón</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__esenciales5" data-datalayer-id="banner_5" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="5" data-datalayer-creative="banner - ropa de cama - esenciales almohadas">
+                            <a href="/ropa-de-cama/ropa-de-cama/almohadas.html">
+                                <div class="esenciales5">
+                                    <span class="tag">Almohadas</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <h2 class="titles_categories">Descubre la calidad y suavidad de nuestros Blancos</h2>
+            <div class="mw-1460">
+                <!-- Descubre -->
+                <div class="container_descubre">
+                    <div class="content_descubre" data-datalayer-id="banner_ropa_de_cama_essentials_seda" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="banner - ropa de cama - essentials seda">
+                        <a href="/rosen/ropa-de-cama/seda.html">
+                            <img class="mobile-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_seda-mobile-min-2.jpg" loading="lazy">
+                            <img class="desktop-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_seda-desktop-min-2.jpg" alt="banner" loading="lazy">
+                        </a>
+                        <a href="/rosen/ropa-de-cama/seda.html">
+                            <h3 class="title_descubre-h3">Mundo Seda</h3>
+                            <p class="paragraph_descubre-p">El material más lujoso y elegante.</p>
+                        </a>
+                    </div>
+                    <div class="content_descubre" data-datalayer-id="banner_ropa_de_cama_essentials_jrosenberg" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="banner - ropa de cama - essentials jrosenberg">
+                        <a href="/coleccion-j-rosenberg-rosen">
+                            <img class="mobile-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_jrosenberg-mobile-min-2.jpg" loading="lazy">
+                            <img class="desktop-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_jrosenberg-desktop-min-2.jpg" alt="banner" loading="lazy">
+                        </a>
+                        <a href="/coleccion-j-rosenberg-rosen">
+                            <h3 class="title_descubre-h3">J. Rosenberg</h3>
+                            <p class="paragraph_descubre-p">Linea premium de Rosen.</p>
+                        </a>
+                    </div>
+                    <div class="content_descubre" data-datalayer-id="banner_ropa_de_cama_essentials_ame" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="banner - ropa de cama - essentials ame">
+                        <a href="/rosen/ropa-de-cama/ame.html">
+                            <img class="mobile-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_ame-mobile-min-2.jpg" loading="lazy">
+                            <img class="desktop-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_ame-desktop-min-2.jpg" alt="banner" loading="lazy">
+                        </a>
+                        <a href="/rosen/ropa-de-cama/ame.html">
+                            <h3 class="title_descubre-h3">Línea AME</h3>
+                            <p class="paragraph_descubre-p">Inspirada en el confort de la hotelería boutique.</p>
+                        </a>
+                    </div>
+                    <div class="content_descubre" data-datalayer-id="banner_ropa_de_cama_essentials_copper_health" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="4" data-datalayer-creative="banner - ropa de cama - essentials copper health">
+                        <a href="/rosen/ropa-de-cama/copper-health.html">
+                            <img class="mobile-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_copper-mobile-min-2.jpg" loading="lazy">
+                            <img class="desktop-rdcr" src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/background_copper-desktop-min-2.jpg" alt="banner" loading="lazy">
+                        </a>
+                        <a href="/rosen/ropa-de-cama/copper-health.html">
+                            <h3 class="title_descubre-h3">Linea Copper Health</h3>
+                            <p class="paragraph_descubre-p">Propiedades únicas brindadas por los hilos de cobre.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="titles_categories">Revisa tutoriales</h2>
+            <div class="mw-1270">
+                <div class="bloque__tutoriales">
+                    <div class="tutoriales back_tutoriales-1">
+                        <div class="contenedor__item bg-img-bnr" data-datalayer-id="video_ropa_de_cama_Como_poner_bien_las_sabanas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="Video - Ropa de cama - Como y para que se usa un protector de plumon">
+                            <a href="#" class="vpop" data-type="vimeo" data-id="781824970" data-autoplay="true" data-loop="true" data-muted="true" data-playsinline="true">
+                                <div class="contenedor__play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-6 h-6">
+                                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="tutoriales">¿Cómo y para qué se usa un protector de plumón?</p>
+                    <div class="tutoriales back_tutoriales-2">
+                        <div class="contenedor__item bg-img-bnr" data-datalayer-id="video_ropa_de_cama_Como_poner_bien_las_sabanas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="Video - Ropa de cama - Como doblar las sabanas inferiores">
+                            <a href="#" class="vpop" data-type="vimeo" data-id="782689095" data-autoplay="true" data-loop="true" data-muted="true" data-playsinline="true">
+                                <div class="contenedor__play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-6 h-6">
+                                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="tutoriales">¿Cómo doblar las sábanas inferiores?</p>
+                    <div class="tutoriales back_tutoriales-3">
+                        <div class="contenedor__item bg-img-bnr" data-datalayer-id="video_ropa_de_cama_Como_poner_bien_las_sabanas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="Video - Ropa de cama - Como poner bien las sabanas">
+                            <a href="#" class="vpop" data-type="vimeo" data-id="781824601" data-autoplay="true" data-loop="true" data-muted="true" data-playsinline="true">
+                                <div class="contenedor__play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" class="w-6 h-6">
+                                        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="tutoriales">¿Cómo poner bien las sábanas?</p>
+                </div>
+            </div>
+            <h2 class="titles_categories"><strong>Blog Rosen:</strong> conoce más de descanso, decoración y tendencias</h2>
+            <div class="mw-1460">
+                <div class="enjoy_us">
+                    <div class="enjoy__categories text-center back-gray" data-datalayer-id="banner_blog_rosen_ropa_de_cama_tipos_de_relleno" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="banner blog - ropa de cama - Tipos de relleno">
+                        <a href="https://blog.rosen.cl/tipos-relleno-de-almohada" target="_blank">
+                            <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/blog-textiles-1-min.jpg" alt="Tipos de relleno" loading="lazy">
+                            <h3 class="blog__rosen-title">Tipos de relleno de almohada:</h3>
+                            <p class="enjoy__categories-p mb-40">beneficios y tecnologías.</p>
+                        </a>
+                    </div>
+                    <div class="enjoy__categories text-center back-gray" data-datalayer-id="banner_blog_rosen_ropa_de_cama_como_elegir_un_plumon" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="2" data-datalayer-creative="banner blog - ropa de cama - Cómo elegir un plumón">
+                        <a href="https://blog.rosen.cl/como-elegir-plumon" target="_blank">
+                            <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/blog-textiles-2-min.jpg" alt="Cómo elegir un plumón" loading="lazy">
+                            <h3 class="blog__rosen-title">Cómo elegir un plumón:</h3>
+                            <p class="enjoy__categories-p">Claves para elegir el adecuado.</p>
+                        </a>
+                   </div>
+                   <div class="enjoy__categories text-center back-gray" data-datalayer-id="banner_blog_rosen_ropa_de_cama_tela_para_sabanas" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="3" data-datalayer-creative="banner blog - ropa de cama - tela para Sábanas">
+                       <a href="https://blog.rosen.cl/tela-para-sabanas" target="_blank">
+                           <img src="https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/blog-textiles-3-min.jpg" alt="Tela para Sábanas" loading="lazy">
+                           <h3 class="blog__rosen-title">Tela para Sábanas</h3>
+                           <p class="enjoy__categories-p">¿Cómo elegir la mejor?</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mw-1460--boton mb-80" data-datalayer-id="boton_ver_todo_ropa_de_cama_abajo" data-datalayer-name="ropa_de_cama_oi2024" data-datalayer-position="1" data-datalayer-creative="botón abajo - ropa de cama - Ver todo ropa de cama">
+                <a href="/ropa-de-cama.html" class="button_cyc">ver todo ropa de cama</a>
+            </div>
+        
+    
+        <!-- script carrusel categorias -->
+        <script>
+            require(['jquery', 'slick'], function($) {
+                $(document).ready(function() {
+                    $('.slick-slider').slick({
+                        autoplay: false,
+                        lazyLoad: 'ondemand',
+                        autoplaySpeed: 2000, // Velocidad de reproducción automática (en milisegundos)
+                        dots: false,
+                        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                        nextArrow: '<button type="button" class="slick-next">Next</button>',
+                        infinite: true, // Activar el desplazamiento infinito
+                        slidesToShow: 9, // Cantidad de slides a mostrar por defecto
+                        responsive: [
+                            {
+                                breakpoint: 1024, // Breakpoint para dispositivos con un ancho máximo de 1024px
+                                settings: {
+                                    slidesToShow: 6 // Mostrar 2 slides en dispositivos con un ancho máximo de 1024px
+                                }
+                            },
+                            {
+                                breakpoint: 768, // Breakpoint para dispositivos con un ancho máximo de 600px
+                                settings: {
+                                    slidesToShow: 4 // Mostrar 4 slide en dispositivos con un ancho máximo de 600px
+                                }
+                            },
+                            {
+                                breakpoint: 480, // Breakpoint para dispositivos con un ancho máximo de 600px
+                                settings: {
+                                    slidesToShow: 2 // Mostrar 2 slide en dispositivos con un ancho máximo de 600px
+                                }
+                            }
+                        ]
+                    });
+        
+                      // Controlar los sliders para mostrar uno a la vez
+                    //$('.slick-slider').on('afterChange', function(event, slick, currentSlide) {
+                        // Ocultar todos los slides excepto el actual
+                          //$('.slick-slider').slick('slickSetOption', 'slidesToShow', 9);
+                          //$('.slick-slider').slick('slickSetOption', 'slidesToScroll', 1);
+                    //});
+                });
+            });
+        
+        window.addEventListener('scroll', function() {
+            var contenidoPrincipal = document.getElementById('contenido_principal');
+            var scrollPosY = window.scrollY || window.pageYOffset;
+            var windowHeight = window.innerHeight;
+            var contentOffset = contenidoPrincipal.offsetTop;
+            var contentHeight = contenidoPrincipal.offsetHeight;
+        
+            if (scrollPosY > contentOffset + contentHeight - windowHeight || scrollPosY < contentOffset) {
+                // Si el scroll está en la parte superior o inferior del contenido, restauramos la opacidad
+                contenidoPrincipal.style.opacity = '1';
+            } else {
+                // Si el scroll está dentro del contenido, reducimos la opacidad
+                var opacity = 1 - ((scrollPosY - contentOffset) / (contentHeight - windowHeight));
+                contenidoPrincipal.style.opacity = opacity;
+            }
+        });
+        
+        window.addEventListener('scroll', function() {
+            var elemento = document.getElementById('elemento');
+            var elemento2 = document.getElementById('elemento2');
+            var scrollPosY = window.scrollY || window.pageYOffset;
+            var opacity;
+        
+            // Calcular la opacidad en función del desplazamiento
+            if (scrollPosY <= 140) {
+                opacity = 1 - (scrollPosY / 140);
+            } else {
+                opacity = 0; // Opacidad mínima después de 140px
+            }
+        
+            elemento.style.opacity = opacity;
+        
+            // Calcular la opacidad en función del desplazamiento
+            if (scrollPosY <= 140) {
+                opacity = 1 - (scrollPosY / 140);
+            } else {
+                opacity = 0; // Opacidad mínima después de 140px
+            }
+        
+            elemento2.style.opacity = opacity;
+        });
+    
+    //Dos Sliders
+    //Carrusel 1
+    
+        //<![CDATA[
+        require([
+            'jquery',
+            'domReady!',
+            'slick'
+        ], function($){
+            $(document).ready(function(){
+    
+        $('.slider-sw__slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 2000,
+            autoplaySpeed: 4000,
+            autoplay: false,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 9,
+            responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            dots: false,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '5px',
+            focusOnSelect: true,
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 641,
+          settings: {
+            dots: true,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '5px',
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 9999,
+          settings: 'unslick'
+        }
+      ]
+    });
+        })});
+        //]]>
+    function changeImage(elementId, newImageSrc) {
+      var image = document.getElementById(elementId);
+      image.src = newImageSrc;
+    }
+    //Carrusel 2
+    
+        //<![CDATA[
+        require([
+            'jquery',
+            'domReady!',
+            'slick'
+        ], function($){
+            $(document).ready(function(){
+    
+        $('.slider-sw__slider-2').slick({
+            dots: false,
+            infinite: true,
+            speed: 2000,
+            autoplaySpeed: 4000,
+            autoplay: false,
+            centerMode: true,
+            centerPadding: '0px',
+            slidesToShow: 3,
+            responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            dots: true,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '0px',
+            focusOnSelect: true,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 641,
+          settings: {
+            dots: true,
+            arrows: true,
+            centerMode: true,
+            centerPadding: '5px',
+            slidesToShow: 1
+          }
+        },
+        {
+          breakpoint: 9999,
+          settings: 'unslick'
+        }
+      ]
+    });
+        })});
+        //]]>
+    function changeImage(elementId, newImageSrc) {
+      var image = document.getElementById(elementId);
+      image.src = newImageSrc;
+    }
+        
+            //<![CDATA[
+            require([
+                'jquery',
+                'domReady!',
+                'slick'
+            ], function($){
+                $(document).ready(function(){
+          
+                //Video Popup
+            $('.video-btn').click(function(){
+                $('.video-popup').fadeIn();
+                $('#iframeHolder').html('');
+                var link = $(this).attr("link");
+                $('#iframeHolder').html('<iframe src="'+link+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+            });
+        $('.close-video').click(function(){
+                $('.video-popup').fadeOut();
+                $('#iframeHolder').html('');
+            });
+        
+        
+            })});
+            //]]>
+        </script>
+        
+        
+        <!-- video popup bloque -->
+        
+        <div id="video-popup-overlay"></div>
+        <div id="video-popup-container">
+          <div id="video-popup-close" class="fade">✖</div>
+          <div id="video-popup-iframe-container">
+            <iframe id="video-popup-iframe" loop="true" src="" width="100%" height="100%" playsinline="true" muted="true" autoplay="true" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+          </div>
+        </div>
+        
+        <style>
+            .page-section {
+                padding: 0 !important;
+                margin: 0 !important;
+                overflow: scroll;
+            }
+            
+            #video-popup-container {
+              display: none;
+              position: fixed;
+              z-index: 996;
+              width: 90%;
+              left: 0;
+              margin-left: 5%;
+              top: 20%;
+              background-color: #fff;
+            }
+            
+            @media (min-width: 768px) {
+                #video-popup-container {
+                  width: 60%;
+                  left: 50%;
+                  margin-left: -30%;
+                }
+            }
+            
+            #video-popup-close {
+              cursor: pointer;
+              position: absolute;
+              right: -10px;
+              top: -10px;
+              z-index: 998;
+              width: 25px;
+              height: 25px;
+              border-radius: 25px;
+              text-align: center;
+              font-size: 12px;
+              background-color: #000;
+              line-height: 25px;
+              color: #fff;
+            }
+            
+            #video-popup-iframe-container {
+              position: absolute;
+              z-index: 997;
+              width: 100%;
+              padding-bottom: 56.25%;
+              border: 2px solid #000;
+              border-radius: 2px;
+              background-color: #000;
+            }
+            
+            #video-popup-iframe {
+              z-index: 999;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              background-color: #000;
+            }
+            
+            #video-popup-overlay {
+              display: none;
+              position: fixed;
+              z-index: 995;
+              top: 0;
+              left: 0;
+              background-color: #000;
+              opacity: 0.8;
+              width: 100%;
+              height: 100%;
+            }
+            
+            #video-popup-close:hover {
+              color: #DE0023;
+            }
+        </style>
+        <script type="text/javascript">
+            //<![CDATA[
+            require([
+                'jquery',
+                'domReady!',
+                'slick'
+            ], function($){
+                $(document).ready(function(){
+                  
+                //Video Popup
+                $(".vpop").on('click', function(e) {
+                    e.preventDefault();
+                    $("#video-popup-overlay,#video-popup-iframe-container,#video-popup-container,#video-popup-close").show();
+                    
+                    var srchref='',autoplay='1',loop='1',playsinline='1',muted='1',id=$(this).data('id');
+                    if($(this).data('type') == 'vimeo') var srchref="//player.vimeo.com/video/";
+                    else if($(this).data('type') == 'youtube') var srchref="https://www.youtube.com/embed/";
+                    
+                    if($(this).data('autoplay') == true) autoplay = '?autoplay=1';
+                    if($(this).data('loop') == true) loop = '&loop=1';
+                    if($(this).data('playsinline') == true) playsinline = '&playsinline=1';
+                    if($(this).data('muted') == true) muted = '&muted=1';
+        
+                    $("#video-popup-iframe").attr('allow', 'autoplay');
+        
+                    if(window.innerWidth < 768) {
+                      
+                      $("#video-popup-iframe").attr('src', srchref+id+autoplay+loop+muted+playsinline);
+                    
+                    } else {
+                      
+                      $("#video-popup-iframe").attr('src', srchref+id+autoplay+loop+playsinline);
+                      
+                    }
+                    // $("#video-popup-iframe").attr('src', srchref+id+autoplay+loop+muted+playsinline);
+                    
+                    
+                    $("#video-popup-iframe").on('load', function() {
+                        $("#video-popup-container").show();
+                    });
+                    });
+        
+                    $("#video-popup-close, #video-popup-overlay").on('click', function(e) {
+                    $("#video-popup-iframe-container,#video-popup-container,#video-popup-close,#video-popup-overlay").hide();
+                    $("#video-popup-iframe").attr('src', '');
+                });
+            })});
+            //]]>
+          </script>
+    
+    <script>
+        require(['jquery', 'slick'], function($) {
+            $(document).ready(function() {
+                $('.additional-slider-2 .slick-slider').slick({
+                    // Configuraciones para el segundo carrusel adicional
+                    autoplay: false,
+                    // Otras configuraciones...
+                });
+            });
+        });
+    </script>    
+</body>
+</html>

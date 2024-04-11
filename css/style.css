@@ -1,0 +1,996 @@
+    /* lo básico */
+    .breadcrumbs {
+        display: none;
+    }
+    .cms-page-view .page-wrapper {
+        background-color: #fff;
+    }
+    a {
+        text-decoration:none;
+    }
+    .abs-cms-section,.columns .column.main,.cms-page-view .column.main .page-section {
+        margin: 0px;
+        padding: 0px!important;
+        box-shadow: none;
+        background-color: #fff;
+    }
+    .text-center {
+        text-align:center;
+    }
+    .mw-1270 {
+        max-width: 1270px;
+        margin:0px auto!important;
+    }
+    .mw-1460 {
+        max-width:1460px;
+        margin:0px auto!important;
+    }
+    .mw-1460--conoce {
+        max-width: 1460px;
+        margin: 0px auto!important;
+        padding: 45px 0px;
+    }
+    .mw-1460--boton {
+        max-width: 1460px;
+        margin: 80px auto 0px;
+        text-align: center;
+    }
+    .mw-1460--botonAbajo {
+        max-width: 1460px;
+        margin: 40px auto 0px;
+        text-align: center;
+    }
+    .mw-1680 {
+        max-width:1680px;
+        margin:0px auto;
+    }
+    .mt-80 {
+        margin-top: 80px;
+    }
+    .mb-80 {
+        margin-bottom: 80px;
+    }
+@media (max-width:768px) {
+    .mb-25 {
+        margin-bottom: 25px;
+    }
+}
+    .d-grid {
+        display:grid;
+    }
+    .gridsection {
+        padding:0px;
+    }
+    
+    /* breadcrumb */
+    @media (min-width:768px) {
+        .breadcrumb-mob {
+            display:none;
+        }
+    }
+    @media (max-width:767px) {
+        .breadcrumb-desk {
+            display:none;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .breadcrumb-desk {
+            margin: 10px 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .breadcrumb-mob {
+            margin: 10px 0 0 15px;
+            text-decoration: none;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .breadcrumb-landing {
+            font-weight: 300;
+            font-size: 12px;
+            color: #4c4c4c;
+            line-height: 1.4;
+        }
+    }
+    @media screen and (max-width: 767px) {
+    .link-breadcrumb:before {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 14px;
+            line-height: 1;
+            color: inherit;
+            content: "\f13a";
+            font-family: summa-icons;
+            margin: 0 3px 0 0;
+            vertical-align: middle;
+            display: inline-block;
+            font-weight: 400;
+            overflow: hidden;
+            speak: none;
+            text-align: center;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        .link-breadcrumb {
+            font-family: Inter,'Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #4c4c4c;
+            font-size: 12px!important;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .breadcrumb-landing, .link-breadcrumb {
+            font-size: 12px;
+            color: #4c4c4c;
+            line-height: 1.4;
+        }
+    }
+    
+    /* Imagen Principal */
+    .imagen__principal {
+        background: url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/img-ropa-de-cama-cl2.jpg) no-repeat;
+        background-position:bottom;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+@media (max-width:470px) {
+    .imagen__principal {
+        background: url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/img-ropa-de-cama-cl2-mobile.jpg);
+        background-position: 50% 40%;
+    }
+}
+    .contenido__principal {
+        max-width: 420px;
+        margin: 0px auto;
+        text-align: center;
+        display: grid;
+        align-content: space-between;
+        height: 830px;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+    }
+@media (max-width:470px) {
+    .contenido__principal {
+        margin: 0px auto 20px;
+        height: 650px;
+    }
+}
+    .contenido__principal a {
+        border: 1px solid #fff;
+        color: #fff;
+        border-radius: 25px;
+        padding: 7px 25px;
+        text-transform: uppercase;
+        font-size: 12px;
+        max-width: 200px;
+        margin: 0% auto 50%;
+        text-decoration: none;
+    }
+@media (max-width:470px) {
+    .contenido__principal a {
+        margin: 0% auto 90%;
+    }
+}
+    .contenido__principal a:hover {
+        border: 1px solid #fff;
+        color: #323232;
+        background-color: #fff;
+        transition: ease .3s;
+    }
+    
+    /* Inicio Sección contenido */
+    .br-70 {
+        border-radius: 70px 70px 0px 0px;
+        background-color: #fff;
+        padding-top: 30px;
+        margin-top: -70px;
+        position: relative;
+    }
+@media (max-width:768px) {
+    .br-70 {
+        border-radius: 40px 40px 0px 0px;
+    }
+}
+
+    /* Titulo principal -  h1 */
+    
+    .title__page {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    @media (max-width: 768px) {
+        .title__page {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    /* Carrusel categorias */
+    .slider {
+        max-width:1400px;
+        margin:0px auto 45px;
+    }
+    .slick-slide {
+        width:100%;
+        padding: 0 6px;
+    }
+    
+    .slick-track {
+        height: auto;
+    }
+    
+    .slick-sliderized {
+        max-width:183px;
+    }
+    .slick-img {
+        width:100%;
+        max-width:183px;
+        border-radius: 10px;
+    }
+    @media (max-width:768px) {
+        .--non-border {
+            border-radius: 0px;
+        }
+        .slick-anchor {
+            font-size:13px!important;
+        }
+    }
+    .pagebuilder-button-secondary {
+        border: 1px solid #323232!important;
+        background-color: #fff!important;
+        color: #323232!important;
+        margin: 0!important;
+    }
+    .slick-anchor {
+        display: block;
+        text-align: center;
+        margin: 10px 0px;
+    }
+    .button_16px {
+        font-size:16px;
+    }
+    
+    /* Bajada */
+    .text__main {
+        max-width: 890px;
+        margin: 0px auto 10px;
+        text-align:center;
+    }
+    @media (max-width:768px) {
+        .text__main {
+            margin: 50px 20px 40px;
+        }
+    }
+    .container_up {
+        margin-top:10px;
+    }
+    @media (min-width:768px) {
+        .container_buttons {
+            display: block;
+            max-width:530px;
+            margin:0 auto 65px;
+            text-align: center;
+        }
+    }
+    @media (max-width:767px) {
+       .container_buttons {
+            margin:0 auto 35px;
+            text-align: center;
+        }
+    }
+    .button_categories {
+        text-align:center;
+    }
+    @media (max-width:768px) {
+        .button_categories {
+            text-align:center;
+            margin: 0px;
+        }
+    }
+    @media (min-width:768px) {
+        .arriba-md {
+            margin: 40px 0px 15px;
+        }
+    }
+    @media (max-width: 767px) {
+        .arriba-md {
+            margin: 20px 0px;
+        }
+    }
+    .button_cyc {
+        color: #fff;
+        background-color:#D9D9D9;
+        font-size: 12px!important;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        display: inline-block;
+        text-decoration: none; 
+        transition: background-color 0.3s ease;
+        min-width: 180px!important;
+        text-align:center;
+        border-radius: 30px;
+    }
+    .button_cyc:hover {
+        color: #fff!important;
+        background-color:#BEB5B2;
+        text-decoration: none; 
+    }
+    .button_cyc-mt15 {
+        color: #fff;
+        background-color:#D9D9D9;
+        font-size: 12px!important;
+        text-transform: uppercase;
+        padding: 15px 20px;
+        display: inline-block;
+        text-decoration: none; 
+        transition: background-color 0.3s ease;
+        min-width: 180px!important;
+        text-align:center;
+        border-radius: 30px;
+        margin-top: -15px;
+    }
+    .button_cyc-mt15:hover {
+        color: #fff!important;
+        background-color:#BEB5B2;
+        text-decoration: none; 
+    }
+    
+    /* menu y espacios */
+    .container__menu_espacios {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        column-gap: 50px;
+        margin-bottom: 70px;
+    }
+    @media (max-width:768px) {
+        .container__menu_espacios {
+            display: block;
+            margin-bottom: 50px;
+        }
+    }
+    /* Estilos para el elemento */
+    .elemento {
+        opacity: 1; /* Inicialmente opacidad máxima */
+        transition: opacity 0.5s ease-in-out; /* Agregamos transición de opacidad */
+        margin: 50px auto;
+        padding: 0px 20px;
+    }
+@media (max-width:768px) {
+    .elemento {
+        margin: 70px auto;
+    }
+}
+    /* Estilos para el segundo elemento */
+    .elemento2 {
+        opacity: 1; /* Inicialmente opacidad máxima */
+        transition: opacity 0.5s ease-in-out; /* Agregamos transición de opacidad */
+    }
+    /* Shop the look */
+    .container__shopthelook-arriba {
+        display: grid;
+        grid-template-columns: 3fr 4.85fr 4fr;
+        gap:5px;
+    }
+@media (max-width:1139px) and (min-width:769px) {
+    .container__shopthelook-arriba {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
+@media (max-width:768px) {
+    .container__shopthelook-arriba {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:5px;
+    }
+    .shop__the__look3 {
+        grid-area: inherit;
+        order:1;
+    }
+    .shop__the__look1 {
+        grid-area: inherit; 
+        order:2;
+    }
+    .shop__the__look2 {
+        grid-area: inherit;
+        order:3;
+    }
+    .dn-mobile {
+        display:none;
+    }
+}
+@media (min-width:1140px) {
+    .shop__dn-desktop {
+        display:none;
+    }
+}
+@media (max-width:1139px) {
+    .shop__dn-mobile {
+        display:none;
+    }
+}
+@media (min-width:1140px) {
+    .container__shopthelook-abajo {
+        display: grid;
+        grid-template-columns: 5fr 6.84fr;
+        gap:5px;
+    }
+}
+@media (max-width:1139px) and (min-width:769px) {
+    .container__shopthelook-abajo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+}
+@media (max-width:768px) {
+    .container__shopthelook-abajo {
+        grid-template-columns: 1fr;
+    }
+}
+    .shop__the__look3 {
+        display: grid;
+        align-items: center;
+    }
+    .contenedor__play:nth-child(1) {
+        margin: 143px auto;
+        max-width: 80px;
+    }
+    .contenedor__play:nth-child(2) {
+        margin: 152px auto;
+        max-width: 80px;
+    }
+    .gridsection {
+        padding: 0px!important;
+    }
+    .sunset-4 {
+        background:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sunset-32x.jpg);
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* margin-bottom: 5px; */
+    }
+    .greenery-1 {
+        background:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/greenery24x-nuevo.jpg);
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* margin-bottom: 5px; */
+    }
+@media (min-width:1306px) {
+    .block3 {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+}
+@media (max-width:1305px) and (min-width:1140px) {
+    .block3 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:1139px) and (min-width:769px) {
+    .block3 {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    .shop__the__look2 {
+        display:none;
+    }
+}
+@media (max-width:768px) {
+    .block3 {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+}
+    .container__block3 {
+        background-color: #F2F2F2;
+        text-align: center;
+        padding: 35px 30px;
+    }
+    .content__block3 {
+        text-align: center;
+    }
+@media (min-width:1306px) {
+    .form__block3 {
+        display: grid;
+        justify-content: end;
+    }
+}
+@media (max-width:768px) {
+    .form__block3 {
+        display: grid;
+        justify-content: end;
+    }
+}
+@media (max-width:1305px) and (min-width:1140px) {
+    .form__block3 {
+        display: none;
+    }
+}
+@media (min-width:1306px) {
+    .form__block3 {
+        display: grid;
+        justify-content: end;
+    }
+}
+@media (max-width:1139px) and (min-width:769px) {
+    .form__block3 {
+        display: grid;
+        justify-content: end;
+    }
+}
+    .form__block3 img {
+        max-height: 250px;
+    }
+    /* Complementos */
+    .back__gray {
+        background-color: #D9D9D9;
+    }
+    .bloque__complementos {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+    }
+@media (max-width:935px) and (min-width:456px) {
+    .bloque__complementos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+}
+@media (max-width:455px) {
+    .bloque__complementos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+    .complementos {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+    }
+    .complementos h4 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .complementos p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+    .complementos .mb-50 {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    /* Bloque Proceso */
+    .bloque__proceso {
+        display: grid;
+        grid-template-columns: 2.41fr 3.38fr 2.41fr;
+        gap: 5px;
+    }
+@media (max-width:455px) {
+    .bloque__proceso {
+        grid-template-columns: 1fr;
+    }
+    .proceso:nth-child(1),.proceso:nth-child(3) {
+        display: none;
+    }
+}
+    /* Bloque Colecciones */
+    .bloque__colecciones {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 8px;
+    }
+    .colecciones p {
+        text-align: center;
+        margin-top: 20px;
+    }
+    /* Carrusel 2 */
+    .container__slider-sw-2 {
+        padding: 10px 0 0;
+    }
+    .slider-sw__item-2 {
+        padding: 30px 10%;
+        text-align:center;
+    }
+@media (min-width:769px) {
+    .slider-sw__slider-2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        margin: 0px auto;
+        text-align: center;
+        max-width: 1460px;
+    }
+    .slider-sw__item-2 {
+        padding: 0px;
+    }
+}
+@media (max-width:768px) {
+    .slider-sw__slider-2 {
+        margin: 10px auto 0px;
+    }
+}
+    .container__slider-sw-2 .slick-arrow.slick-prev {
+        left: 5%;
+    }
+    .container__slider-sw-2 .slick-arrow.slick-next {
+        right: 5%;
+    }
+    .slider-sw__contenedor {
+        overflow: hidden;
+    }   
+    .slider-sw__slider-2 .slick-track {
+        padding: 0px 0 10px;
+    }
+    @media (min-width: 769px) {
+        .slider-sw__slider-2 .slick-track {
+            padding: 0;
+        }
+    }
+    .slider-sw__btn:hover {
+        cursor: pointer !important;
+    } 
+
+    /* Bloque esenciales */
+    .bloque__esenciales {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+    }
+@media (max-width:490px) {
+    .bloque__esenciales {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+} 
+    span.tag {
+        background-color: #fff;
+        margin: 40px 0px 330px 0px;
+        padding: 15px 40px 15px 45px;
+        display:inline-flex;
+    }
+    .content__esenciales4 {
+        display: grid;
+        grid-area: 2 / 1 / 3 / 5;
+    }
+    .esenciales4 {
+        background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/plumon2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 365px;
+    }
+    .content__esenciales5 {
+        display: grid;
+        grid-area: 2 / 5 / 3 / 9;
+    }
+    .esenciales5 {
+        background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/almohadas2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 365px;
+    }
+    .content__esenciales1 {
+        display: grid;
+        grid-area: 2 / 9 / 3 / 13;
+    }
+    .esenciales1 {
+        background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/cubrecolchon2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 365px;
+    }
+    .content__esenciales2 {
+        display: grid;
+        grid-area: 1 / 1 / 2 / 6;
+    }
+    .esenciales2 {
+        background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/sabanas2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 365px;
+    }
+    .content__esenciales3 {
+        display: grid;
+        grid-area: 1 / 6 / 2 / 13;
+    }
+    .esenciales3 {
+        background-image:url(https://www.rosen.cl/media/wysiwyg/2024/ropa-de-cama/topper2x.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 365px;
+    }
+@media (max-width:720px) and (min-width:491px) {
+    .content__esenciales2 { 
+        grid-area: 1 / 1 / 2 / 7; 
+    }
+    .content__esenciales3 { 
+        grid-area: 1 / 7 / 2 / 13;
+    }
+    .content__esenciales4 {
+        grid-area: 2 / 1 / 3 / 7; 
+    }
+    .content__esenciales5 { 
+        grid-area: 2 / 7 / 3 / 13;
+    }
+    .content__esenciales1 { 
+        grid-area: 3 / 1 / 4 / 13;
+    }
+}
+@media (max-width:490px) {
+    .content__esenciales2,.content__esenciales3,.content__esenciales4,.content__esenciales5,.content__esenciales1 { 
+        grid-area: inherit;
+    }
+}
+    
+    /* Bloque Colecciones */
+    .bloque__colecciones {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 8px;
+    }
+@media (max-width:768px) {
+    .bloque__colecciones {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+    .colecciones p {
+        text-align: center;
+        margin-top: 20px;
+    }
+    /* Descubre */
+    .container_descubre {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+    }
+    @media (max-width:768px) {
+        .container_descubre {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+    .title_descubre-h3 {
+        font-size:18px;
+        font-weight:400;
+        text-align:center;
+        margin-top:18px;
+    }
+    .paragraph_descubre-p {
+        font-size:14px;
+        text-align:center;
+        max-width: 250px;
+        margin: 0px auto;
+    }
+    @media (min-width:768px) {
+        .mobile-rdcr {
+            display:none;
+        } 
+    }
+    @media (max-width:767px) {
+        .desktop-rdcr {
+            display:none;
+        } 
+    }    
+    /* Tutoriales */
+    .bloque__tutoriales {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:20px;
+    }
+@media (max-width:768px) {
+    .bloque__tutoriales {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width:769px) {
+    .tutoriales:nth-child(1) {
+        order:1;
+    }
+    .tutoriales:nth-child(2) {
+        order:4;
+    }
+    .tutoriales:nth-child(3) {
+        order:2;
+    }
+    .tutoriales:nth-child(4) {
+        order:5;
+    }
+    .tutoriales:nth-child(5) {
+        order:3;
+    }
+    .tutoriales:nth-child(6) {
+        order:6;
+    }
+}
+    .back_tutoriales-1 {
+        background:url(https://www.rosen.cl/media/wysiwyg/banner-rdc-1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+@media (max-width:768px) {
+    .back_tutoriales-1,.back_tutoriales-2,.back_tutoriales-3 {
+        margin: 0px 20px;
+    }
+}
+    .back_tutoriales-2 {
+        background:url(https://www.rosen.cl/media/wysiwyg/banner-rdc-2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .back_tutoriales-3 {
+        background:url(https://www.rosen.cl/media/wysiwyg/banner-rdc-3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    p.tutoriales {
+        text-align: center;
+    }
+/* Blog Rosen */
+a, a:hover {
+    text-decoration:none;
+}
+.titles_categories {
+    font-size:26px;
+    text-align:center;   
+    margin:80px 0px 40px;   
+}
+@media (max-width:768px) {
+    .titles_categories {
+        font-size:22px;
+        margin: 60px 20px 40px;
+        padding: 0px 20px;
+    }
+}
+.text-bold {
+    font-weight:bold;
+}
+.enjoy_us {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px;
+}
+@media (max-width:768px) {
+    .enjoy_us {
+        display: block;
+    }
+}
+.text-center {
+    text-align:center; 
+}
+.back-gray {
+    background-color:#F5F5F5;
+}
+.blog__rosen-title {
+    font-size: 18px;
+    font-weight: 500;
+    max-width: 360px;
+    text-align: center;
+    margin: 30px auto 10px;
+}
+@media (max-width:905px) and (min-width:769px) {
+    .blog__rosen-title {
+        font-size: 18px;
+        font-weight: 500;
+        max-width: 360px;
+        text-align: center;
+        margin: 30px auto 10px;
+    }
+}
+.enjoy__categories-p {
+    font-size:14px;
+}
+@media (max-width:768px) {
+    .enjoy__categories-p {
+        padding:0px 20px 30px;
+    }
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+@media (max-width:768px) {
+    .mb-40 {
+        padding-bottom:40px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Video Pop Up */
+
+.page-section {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: scroll;
+}
+
+#video-popup-container {
+  display: none;
+  position: fixed;
+  z-index: 996;
+  width: 90%;
+  left: 0;
+  margin-left: 5%;
+  top: 20%;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    #video-popup-container {
+      width: 60%;
+      left: 50%;
+      margin-left: -30%;
+    }
+}
+
+#video-popup-close {
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 998;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #000;
+  line-height: 25px;
+  color: #fff;
+}
+
+#video-popup-iframe-container {
+  position: absolute;
+  z-index: 997;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border: 2px solid #000;
+  border-radius: 2px;
+  background-color: #000;
+}
+
+#video-popup-iframe {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+}
+
+#video-popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 995;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+
+#video-popup-close:hover {
+  color: #DE0023;
+}
